@@ -14,7 +14,6 @@ class SportsTeam
     @players << player
   end
 
-
   def add_point_for_win(result)
     @points += 1 if result == "win"
   end
