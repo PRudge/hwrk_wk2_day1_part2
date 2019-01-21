@@ -21,16 +21,18 @@ class TestTeam < MiniTest::Test
   end
 
   def test_team_name
-    # assert_equal("Celtic", @team_info.name())
-    assert_equal("Celtic", @team_info.get_name())
+    assert_equal("Celtic", @team_info.name())
+    # assert_equal("Celtic", @team_info.get_name())
   end
 
   def test_players
-    # assert_equal(["Daniel Rudge", "Maddy Rudge", "Brogan Rudge", "Harry Bamber"], @team_info.players())
-    assert_equal(["Daniel Rudge", "Maddy Rudge", "Brogan Rudge", "Harry Bamber"], @team_info.get_players())
-  end
-  # #
-  # def test_account_type
-  #   assert_equal("Pauline Rudge", @team_info.coach())
+    assert_equal(["Daniel Rudge", "Maddy Rudge", "Brogan Rudge", "Harry Bamber"], @team_info.players())
+  #   assert_equal(["Daniel Rudge", "Maddy Rudge", "Brogan Rudge", "Harry Bamber"], @team_info.get_players())
   # end
+  # #
+  def test_account_type
+    assert_equal("Pauline Rudge", @team_info.coach())
+    # assert_equal("Pauline Rudge", @team_info.get_coach())
+  end
+
 end
