@@ -8,7 +8,6 @@ class SportsTeam
     @coach = input_coach
   end
 
-
   # def get_name()
   #   return @name
   # end
