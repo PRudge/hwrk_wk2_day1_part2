@@ -28,11 +28,23 @@ class TestTeam < MiniTest::Test
   def test_players
     assert_equal(["Daniel Rudge", "Maddy Rudge", "Brogan Rudge", "Harry Bamber"], @team_info.players())
   #   assert_equal(["Daniel Rudge", "Maddy Rudge", "Brogan Rudge", "Harry Bamber"], @team_info.get_players())
-  # end
+  end
   # #
-  def test_account_type
+  def test_coach_name
     assert_equal("Pauline Rudge", @team_info.coach())
     # assert_equal("Pauline Rudge", @team_info.get_coach())
+  end
+
+  def test_add_new_player
+    # check length of array
+    @team_info.add_new_player("Lucy Bainton")
+    num_players = @team_info.players().length
+    assert_equal(5, num_players)
+  end
+
+  def test_won_lost__won
+    @team_info.add_point_for_win("win")
+    assert_equal(1, @team_info.points())
   end
 
 end
